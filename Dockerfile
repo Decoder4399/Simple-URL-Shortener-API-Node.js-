@@ -6,7 +6,7 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN apt-get update && apt-get upgrade -y
+RUN apk update && apk upgrade
 
 COPY . .
 
