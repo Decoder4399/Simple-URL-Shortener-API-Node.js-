@@ -1,5 +1,5 @@
 const express = require("express");
-const shortid = require("shortid");
+const shortid = require("shortid");   
 
 const app = express();
 app.use(express.json());
@@ -25,4 +25,4 @@ app.get("/:id", (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(5000, () => console.log("Server running on port 5000"))
