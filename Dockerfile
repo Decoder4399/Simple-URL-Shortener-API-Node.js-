@@ -1,9 +1,9 @@
-FROM node:18-alpine3.19
+FROM node:18-bullseye-slim
 
 WORKDIR /app
 
 COPY package*.json ./
-
+RUN apk update && apk upgrade
 RUN npm install
 
 COPY . .
