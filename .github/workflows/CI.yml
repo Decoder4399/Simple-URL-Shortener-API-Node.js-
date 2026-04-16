@@ -24,9 +24,9 @@ jobs:
               run: npm audit
 
             - name: 5. Build Docker Image
-              run: docker build -t URL-shorteer .
+              run: docker build -t url-short
 
             - name: 6. scan docker image
               uses: aquasecurity/trivy-action@master
               with:
-                image-ref: URL-shorteer
+                image-ref: url-short
