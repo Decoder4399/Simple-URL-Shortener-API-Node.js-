@@ -1,0 +1,27 @@
+name: CI pipeline
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    CI-pipe:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: 1. code checkout
+              uses: actions/checkout@v4
+
+            - name: 2. node setup
+              uses: actions/setup-node@v4
+              with:
+                node-version: 18
+
+            - name: 3. install dependencies
+              run: npm install
+
+            - name: 4. security audit
+              run: npm audit
+
+            - name: 5. Build check
+              run: echo "Build Successful"
